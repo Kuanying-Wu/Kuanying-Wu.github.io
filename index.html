@@ -1,46 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HI I'm Kevin Wu</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 KaTeX CSS 和 JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
 </head>
+    
 <body>
     <header>
+        <h1>Kevin Wu</h1>
+        <p>吳冠穎</p>
         <div class="profile-picture-container">
-            <img src="note.png" alt="Profile Picture" class="profile-picture">
+            <img src="img/你好.png" alt="你好.png" class='profile-picture'>
         </div>
     </header>
 
     <main>
-        <div class="gallery">
-            <div class="gallery-item" onclick="openImage('note.png')">
-                <img src="note.png" alt="Image 1">
+        <section class='skill-sum'>
+            <h2>LaTeX / Python / git / Linux / 高能物理 / Belle II</h2>
+        </section> 
+        
+        <section class='self-describe'>
+            <div>
+                <h2>Research</h2>
+                <p>使用 LaTeX 編寫 slide 及 Belle II note</p>
+                <p>使用 pandas polars 進行數據分析</p>
+                <p>使用 git 紀錄 side project 保存內容</p>
+                <p>在Belle II 實驗尋找\(B^0 \to D^{*+}_ {s0} D^-\)衰變分支並於物理年會報告</p>
+                <p>在Belle II 實驗尋找\(B^0 \to J/\psi \eta^\prime \)衰變分支並記錄於Belle II Note</p> 
+                <p>在Belle II 實驗尋找\(B^+ \to \rho^+ \eta \)衰變分支並記錄於Belle II Note</p>
+                <p>研究Infineon雷達並投稿⾄物理實作平台及教學⽤⽂件</p>
             </div>
-            <div class="gallery-item" onclick="openImage('note.png')">
-                <img src="note.png" alt="Image 2">
+            
+        
+            <div>
+                <h2>Achievement</h2>
+                <p>2022 創享未來設計競賽 參賽</p>
+                <p>2022 第五屆全國科學教具創意設計競賽 入選</p>
+                <p>2022 第三屆科學科普專業英⽂能⼒⼤賽 北⼀區賽社會青年組冠軍</p>
+                <p>2022 第三屆科學科普專業英⽂能⼒⼤賽 總決賽社會青年組冠軍</p>
+                <p>2023 未來學⽣智慧競賽 佳作</p>
+                <p>2023 擔任雷達教案助理</p>
+                <p>2023 第七屆創創AIOT 決賽入圍</p>
+                <p>AI900證照 通過</p>
             </div>
-            <div class="gallery-item" onclick="openImage('note.png')">
-                <img src="note.png" alt="Image 3">
+        </section>
+
+        <section class='Certificate'>
+            <h2>Project</h2>
+        </section>
+        
+        <section class='gallery'>
+            <div class="gallery-item">
+                <img src="img/未來學生-獎狀.jpg" alt="未來學生獎狀.jpg">
+                <h2>未來學⽣智慧競賽 佳作</h2>
             </div>
-            <div class="gallery-item" onclick="openImage('note.png')">
-                <img src="note.png" alt="Image 4">
+            <div class="gallery-item">
+                <img src="img/英文競賽-獎狀2.jpg" alt="英文競賽-獎狀2.jpg">
+                <h2>第三屆科學科普專業英⽂能⼒⼤賽 北⼀區賽社會青年組冠軍</h2>
             </div>
-            <div class="gallery-item" onclick="openImage('note.png')">
-                <img src="note.png" alt="Image 5">
+            <div class="gallery-item">
+                <img src="img/英文競賽-獎狀1.jpg" alt="英文競賽-獎狀1.jpg">
+                <h2>第三屆科學科普專業英⽂能⼒⼤賽 總決賽社會青年組冠軍</h2>
             </div>
-            <div class="gallery-item" onclick="openImage('note.png')">
-                <img src="note.png" alt="Image 6">
+            <div class="gallery-item">
+                <img src="img/教具.jpg" alt="教具.jpg">
+                <h2>第五屆全國科學教具創意競賽 入選</h2>
             </div>
-        </div>
+            <div class="gallery-item">
+                <img src="img/創享未來.jpg" alt="創想未來.jpg">
+                <h2>創享未來設計競賽 參賽</h2>
+            </div>
+            <div class="gallery-item">
+                <img src="img/創創AIOT.jpg" alt="創創AIOT.jpg">
+                <h2>第七屆創創AIOT 決賽入圍</h2>
+            </div>
+            <div class="gallery-item">
+                <img src="img/AI-900.jpg" alt="AI-900.jpg">
+                <h2>AI900證照 通過</h2>
+            </div>
+            
+        </section>
     </main>
+    
 
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeImage()">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

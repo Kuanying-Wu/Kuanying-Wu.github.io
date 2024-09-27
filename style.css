@@ -1,0 +1,184 @@
+* {
+    padding:0;
+    margin:0
+}
+
+header{
+    height: 70vh;
+    weight: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: antiquewhite;
+    line-height: 60px;
+    background-image: url('img/wood.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+body{
+    font-family: 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+}
+
+header h1{
+    text-decoration: none;
+    font-size: 50px;
+}
+
+header p{
+    text-decoration: none;  
+    font-size: 30px;
+}
+
+.profile-picture-container {
+    width: 400px;  /* 容器寬度 */
+    height: 400px; /* 容器高度 */
+    overflow: hidden;  /* 避免圖片超出容器 */
+    border-radius: 50%;  /* 使容器成為圓形 */
+    position: absolute;  /* 絕對定位 */
+    top: 420px;           /* 距離上方 50 像素 */  
+}
+
+.profile-picture {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.skill-sum{
+    background-color: antiquewhite;
+    height: 30vh;
+    weight: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: brown;
+    line-height: 60px;
+    border: black solid;
+}
+
+.self-describe{
+    background-color: antiquewhite;
+    height: 100vh;
+    weight: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: brown;
+    line-height: 30px;
+    border: black solid;
+}
+
+.self-describe div{
+    width: 600px;
+    text-align: left;
+    /* border: black solid; */
+}
+ 
+.self-describe div h2{
+    font-size: 40px;
+    padding: 20px 0 20px;
+}
+
+.self-describe div p{
+    font-size: 20px;
+}
+
+.Certificate{
+    background-color: antiquewhite;
+    color: brown;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery {
+    padding: 100px 0 0;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 設置3個等寬的欄位 */
+    gap: 100px; /* 設置每個項目之間的間距 */
+    justify-content: center; /* 水平對齊，確保格子在容器內居中 */
+    border: black solid;
+    color: brown;
+}
+
+.gallery-item {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 70%; /* 縮小該圖片的寬度 */
+    margin: 0 auto; /* 居中圖片 */
+    display: block;
+
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item h2 {
+   font-size: 20px;
+}
+
+
+.gallery-item:hover {
+    transform: scale(1.05); 
+}
+
+
+/* 響應式設計 */
+@media (max-width: 768px){
+    .gallery {
+        grid-template-columns: 1fr; /* 改為單列垂直排列 */
+    }
+}
+
+
+/* header a:hover{
+    color: white;
+    text-decoration: underline;
+} */
+
+
+/* h1{
+    position: absolute;
+    left: 5px;
+    top: 0;
+    line-height: 100px;
+    
+} */
+
+/* header p{
+    position: absolute;
+    top: 20px;
+} */
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    height: 42vh;
+    color: brown;
+}
+
+.news h2{
+    font-size: 60px;
+}
+
+.news p{
+    font-size: 20px;
+    margin: 20px 0;
+}
+
