@@ -34,18 +34,25 @@ header p{
 }
 
 .profile-picture-container {
-    width: 400px;  /* 容器寬度 */
-    height: 400px; /* 容器高度 */
-    overflow: hidden;  /* 避免圖片超出容器 */
-    border-radius: 50%;  /* 使容器成為圓形 */
-    position: absolute;  /* 絕對定位 */
-    top: 420px;           /* 距離上方 50 像素 */  
+    width: 220px;  
+    height: 220px; 
+    overflow: hidden;  
+    border-radius: 50%;           
+    display: flex;            
+    justify-content: center;  
+    margin-bottom: 10px; 
+    position: absolute;
+    top: -100px;                  /* 設置為從父容器的頂部開始 */
+    left: 50%;               /* 水平居中 */
+    transform: translateX(-50%);
+    
 }
 
 .profile-picture {
-    width: 100%; 
-    height: auto; 
-    display: block;
+    width: 100%;              /* 增加寬度以放大圖片 */
+    height: auto;            /* 自動高度以保持比例 */
+    border-radius: 50%;      /* 圓形圖片 */
+    object-fit: cover;           
 }
 
 .skill-sum{
@@ -58,7 +65,8 @@ header p{
     justify-content: flex-end;
     color: brown;
     line-height: 60px;
-    border: black solid;
+    /* border: black solid; */
+    position: relative;
 }
 
 .self-describe{
@@ -71,8 +79,9 @@ header p{
     justify-content: center;
     color: brown;
     line-height: 30px;
-    border: red solid;   
+    /* border: red solid;    */
 }
+
 .self-describe div{
     text-align: left;
 }
@@ -88,7 +97,7 @@ header p{
     /* border: black solid; */
 }
 
-.Certificate{
+.Center-space{
     background-color: antiquewhite;
     color: brown;
     font-size: 30px;
@@ -98,13 +107,13 @@ header p{
 }
 
 .gallery {
-    padding: 100px 0 0;
+    padding: 100px 0 100px;
     background-color: antiquewhite;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 設置3個等寬的欄位 */
     gap: 100px; /* 設置每個項目之間的間距 */
     justify-content: center; /* 水平對齊，確保格子在容器內居中 */
-    border: black solid;
+    /* border: black solid; */
     color: brown;
 }
 
@@ -134,13 +143,93 @@ header p{
     transform: scale(1.05); 
 }
 
+.label-container {
+    display: flex;               /* 使用 flexbox 進行水平排列 */
+    flex-wrap: wrap;             /* 超過容器寬度時，自動換行 */
+    gap: 10px;                   /* 元素之間的間距 */
+    justify-content: flex-start; /* 從左到右排列（可以調整為 'center' 或 'space-between'） */
+    align-items: center;         /* 垂直方向置中對齊 */
+}
+
+.label {
+    background-color: green;    /* 背景顏色設為綠色 */
+    color: white;               /* 字體顏色設為白色 */
+    font-weight: bold;          /* 文字設為粗體 */
+    display: inline-flex;       /* 使用 inline-flex，讓容器寬度根據內容調整 */
+    justify-content: center;    /* 水平置中 */
+    align-items: center;        /* 垂直置中 */
+    padding: 0 10px;            /* 添加左右內邊距來增強可視效果 */
+    height: 30px;               /* 設定固定的高度 */
+    text-align: center;         /* 確保文字在框內居中 */
+    border-radius: 8px;         /* 讓邊框有圓角效果 */
+    white-space: nowrap;        /* 防止文字換行 */
+}
+
+.read-more {
+    color: brown;                 /* 字體顏色為藍色 */
+    border: 2px solid white;      /* 藍色外框 */
+    background-color: transparent; /* 背景透明 */
+    padding: 10px 20px;          /* 內邊距 */
+    text-decoration: none;        /* 去掉下劃線 */
+    border-radius: 5px;          /* 圓角 */
+    transition: background-color 0.3s; /* 背景顏色過渡效果 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.read-more:hover {
+    background-color: rgba(0, 0, 255, 0.1); /* 懸停時的背景顏色 */
+}
+
+.full-width {
+    width: 100%; /* 設定圖片寬度為螢幕的100% */
+    height: auto; /* 高度自動，保持比例 */
+    display: block; /* 去除底部空白 */
+}
+
+.footer{
+    height: 20vh;
+    weight: 100px;
+    background-color: antiquewhite;
+    color: brown;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* 響應式設計 */
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
+    header {
+        background-size: contain; /* 讓背景圖片縮放以適應螢幕大小 */
+        background-position: center; /* 確保圖片保持在中央 */
+        background-attachment: scroll; /* 使背景圖片不固定，隨滾動移動 */
+    }
+    
     .gallery {
         grid-template-columns: 1fr; /* 改為單列垂直排列 */
     }
+
+    .self-describe {
+        height: auto;
+        padding: 20px;
+    }
+
+    .self-describe div h2 {
+        font-size: 30px;
+        padding: 15px 0;
+    }
+
+    .self-describe div p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    
 }
+
 
 
 /* header a:hover{

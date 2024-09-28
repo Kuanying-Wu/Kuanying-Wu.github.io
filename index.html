@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HI I'm Kevin Wu</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <!-- 引入 KaTeX CSS 和 JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
@@ -15,14 +16,14 @@
 <body>
     <header>
         <h1>Kevin Wu</h1>
-        <p>吳冠穎</p>
-        <div class="profile-picture-container">
-            <img src="img/你好.png" alt="你好.png" class='profile-picture'>
-        </div>
+        <p>Curious about amazing thing</p>
     </header>
 
     <main>
         <section class='skill-sum'>
+            <div class="profile-picture-container">
+                <img src="img/你好.png" alt="你好.png" class='profile-picture'>
+            </div>
             <h2>LaTeX / Python / git / Linux / 高能物理 / Belle II</h2>
         </section> 
         
@@ -50,43 +51,104 @@
             </div>
         </section>
 
-        <section class='Certificate'>
+        <section class='Center-space'>
             <h2>Project</h2>
         </section>
         
-        <section class='gallery'>
+        <section class='gallery'> 
             <div class="gallery-item">
-                <img src="img/未來學生-獎狀.jpg" alt="未來學生獎狀.jpg">
-                <h2>未來學⽣智慧競賽 佳作</h2>
+                <img src="img/物理年會.png" alt="物理年會.png" onclick="redirectToUrl('Physics-annual.html')">
+                <h2>物理年會壁報</h2>
+                <div class='label-container'>
+                    <p class='label'>物理年會</p>
+                    <p class='label'>粒子物理</p>
+                </div>
+                <p>在中央大學進行\(B^0 \to D^{*+}_ {s0} D^-\)衰變分支的報告</p>
+                <a href="Physics-annual.html" class="read-more">read more</a>
             </div>
             <div class="gallery-item">
                 <img src="img/英文競賽-獎狀2.jpg" alt="英文競賽-獎狀2.jpg">
-                <h2>第三屆科學科普專業英⽂能⼒⼤賽 北⼀區賽社會青年組冠軍</h2>
+                <h2>第三屆科學科普專業英⽂能⼒⼤賽 北⼀區賽</h2>
+                <div class='label-container'>
+                    <p class='label'>個人競賽</p>
+                    <p class='label'>冠軍</p>
+                </div>
+                <p>一個和物理相關術語的考試類型競賽</p>
             </div>
             <div class="gallery-item">
                 <img src="img/英文競賽-獎狀1.jpg" alt="英文競賽-獎狀1.jpg">
-                <h2>第三屆科學科普專業英⽂能⼒⼤賽 總決賽社會青年組冠軍</h2>
-            </div>
-            <div class="gallery-item">
-                <img src="img/教具.jpg" alt="教具.jpg">
-                <h2>第五屆全國科學教具創意競賽 入選</h2>
-            </div>
-            <div class="gallery-item">
-                <img src="img/創享未來.jpg" alt="創想未來.jpg">
-                <h2>創享未來設計競賽 參賽</h2>
-            </div>
-            <div class="gallery-item">
-                <img src="img/創創AIOT.jpg" alt="創創AIOT.jpg">
-                <h2>第七屆創創AIOT 決賽入圍</h2>
+                <h2>第三屆科學科普專業英⽂能⼒⼤賽 總決賽</h2>
+                <div class='label-container'>
+                    <p class='label'>個人競賽</p>
+                    <p class='label'>冠軍</p>
+                </div>
+                <p>一個和物理相關術語的考試類型競賽</p>
             </div>
             <div class="gallery-item">
                 <img src="img/AI-900.jpg" alt="AI-900.jpg">
-                <h2>AI900證照 通過</h2>
+                <h2>AI900證照</h2>
+                <div class='label-container'>
+                    <p class='label'>個人</p>
+                    <p class='label'>通過</p>
+                </div>
+                <p>一個關於人工智慧及機器學習基本概念的考試</p>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="img/未來學生-獎狀.jpg" alt="未來學生獎狀.jpg">
+                <h2>未來學⽣智慧競賽</h2>
+                <div class='label-container'>
+                    <p class='label'>合作競賽</p>
+                    <p class='label'>佳作</p>
+                </div>
+                <p>以AI設計做為主題的競賽，我們將AI影像識別結合助行器嘗試矯正中風病患的步態</p>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="img/教具.jpg" alt="教具.jpg">
+                <h2>第五屆全國科學教具創意競賽</h2>
+                <div class='label-container'>
+                    <p class='label'>合作競賽</p>
+                    <p class='label'>入選</p>
+                </div>
+                <p>我們使用Arduino及壓電元件建立一個可監測環境溫濕度的自動加濕器</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img/bitcoin.png" alt="bitcoin.png">
+                <h2>投資記帳管理</h2>
+                <div class='label-container'>
+                    <p class='label'>獨立開發</p>
+                </div>
+                <p>一個通過excel編輯記帳並轉換成圖片以利查帳紀錄獲利的工具，目前正在進行優化以利使用方便</p>
+                <a href="https://github.com/Kuanying-Wu/bitcoin" class="read-more">read more</a>
+            </div>
+            <div class="gallery-item">
+                <img src="img/創創AIOT.jpg" alt="創創AIOT.jpg">
+                <h2>第七屆創創AIOT </h2>
+                <div class='label-container'>
+                    <p class='label'>合作競賽</p>
+                    <p class='label'>決賽入圍</p>
+                </div>
+                <p>以AI設計做為主題的競賽，我們將先前未來學⽣智慧競賽作品優化後結合英飛凌雷達監測使用情況，以達到省電效果</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img/infineon.png" alt="infineon.png">
+                <h2>Infineon 雷達教案 </h2>
+                <div class='label-container'>
+                    <p class='label'>教案</p>
+                </div>
+                <p>研究infineon雷達做為比賽用途，並編寫成教案投稿至物理實作平台，而後更新教案保存至hackMD</p>
+                <a href="https://www.tps-ppp.org/course_detail/497.htm" class="read-more">物理實作平台</a>
+                <a href="https://hackmd.io/pCWbKBm3S9mbNEBLzJIshw" class="read-more">hackMD</a>
             </div>
             
         </section>
+        
     </main>
     
+    <footer class='footer'>
+        Copyright © 2024 Kevin. All rights reserved.
+    </footer>
 
 </body>
 </html>
