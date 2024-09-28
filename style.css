@@ -71,22 +71,21 @@ header p{
     justify-content: center;
     color: brown;
     line-height: 30px;
-    border: black solid;
+    border: red solid;   
 }
-
 .self-describe div{
-    width: 600px;
     text-align: left;
-    /* border: black solid; */
 }
  
 .self-describe div h2{
     font-size: 40px;
     padding: 20px 0 20px;
+    /* border: black solid; */
 }
 
 .self-describe div p{
     font-size: 20px;
+    /* border: black solid; */
 }
 
 .Certificate{
