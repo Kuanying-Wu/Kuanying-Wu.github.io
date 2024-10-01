@@ -1,2 +1,2 @@
 # Access my BLOG
-- [BLOG](https://Kuanying-Wu.github.io/self/)
+- [BLOG](https://kevinwudev.github.io/self/)
