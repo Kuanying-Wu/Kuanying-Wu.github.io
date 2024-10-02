@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>物理年會</title>
+    <title>slide</title>
+    <!-- 引入 KaTeX CSS 和 JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
 </head>
 <body>
     <style>
@@ -31,18 +36,19 @@
             font-size: 16px;         /* 字體大小 */
             display: inline-block;    /* 使其成為行內塊元素 */
         }
+
         
     </style>
     
     <section class='Center-space'>
         <div>
-            <h2>物理年會壁報</h2>
+            <h2>\(B^0 \to J/\psi \eta^\prime\) slide</h2>
             <a href="index.html" class="button">返回主頁面</a>
         </div>
     </section>
     
     <section>
-        <img src="img/物理年會.png" alt="物理年會.png" class="full-width">
+        <iframe src="pdf/B0_to_Jpsi_etap_v2.pdf" class='pdf'></iframe>
     </section>
     
 </body>
